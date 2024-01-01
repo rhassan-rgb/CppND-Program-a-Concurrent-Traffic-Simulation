@@ -68,9 +68,9 @@ int Calculate()
 {
         //set cycle duration
     std::random_device rd;
-    std::default_random_engine generator(rd());
+    std::mt19937 generator(rd());
     // Generate a random number between 4 and 6
-    std::uniform_real_distribution<double> distribution(4, 6);
+    std::uniform_int_distribution<int> distribution(4, 6);
     return distribution(generator);
 }
 // virtual function which is executed in a thread
